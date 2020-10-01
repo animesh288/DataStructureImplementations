@@ -3,7 +3,7 @@ public class MyLinkedList<E> {
 	
 	Node<E> head;
 	
-	void add(E data) {
+	public void add(E data) {
 		Node<E> toAdd = new Node<E>(data);
 		
 		if(isEmpty())
@@ -23,7 +23,7 @@ public class MyLinkedList<E> {
         return "Index: "+index;
     }
 
-	E get(int index)
+	public E get(int index)
 	{
 		if(index>=size()||index<0)
 			throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
@@ -37,7 +37,7 @@ public class MyLinkedList<E> {
 			return temp.data;
 		}
 	}
-	void add(E val, int index)
+	public void add(E val, int index)
 	{
 		Node<E> newNode = new Node<E>(val);
 		if(index>size()||index<0)
@@ -72,7 +72,7 @@ public class MyLinkedList<E> {
 		}
 	}
 	
-	void set(E val, int index) {
+	public void set(E val, int index) {
 		Node<E> newNode = new Node<E>(val);
 		if(index>=size()||index<0)
 			throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
@@ -96,11 +96,11 @@ public class MyLinkedList<E> {
 		}
 	}
 	
-	void remove() {
+	public void remove() {
 		head = head.next;
 	}
 	
-	void remove(int index) {
+	public void remove(int index) {
 		if(index>=size()||index<0)
 			throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
 		else if(index==0) {
@@ -123,7 +123,7 @@ public class MyLinkedList<E> {
 		
 	}
 	
-	int size()
+	public int size()
 	{
 		if(isEmpty())
 			return 0;
@@ -139,11 +139,11 @@ public class MyLinkedList<E> {
 		}
 	}
 	
-	boolean isEmpty() {
+	public boolean isEmpty() {
 		return head == null;
 	}
 	
-	void display() {
+	public void display() {
 		Node<E> temp = head;
 		while(temp!=null)
 		{
